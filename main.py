@@ -161,51 +161,51 @@ class MyWidget(QMainWindow):
         m = self.lineEdit_2.text()
         if m != '' and m != '?':
             m=float(m)
-            m = self.perevod(m, self.comboBox_14.currentText())
+            m = self.perevod(m, self.comboBox_15.currentText())
         v = self.lineEdit_3.text()
         if v != '' and v != '?':
             v=float(v)
-            v = self.perevod(v, self.comboBox_14.currentText())
+            v = self.perevod(v, self.comboBox_16.currentText())
         F = self.lineEdit_5.text()
         if F != '' and F != '?':
             F=float(F)
-            F = self.perevod(F, self.comboBox_14.currentText())
+            F = self.perevod(F, self.comboBox_17.currentText())
         t = self.lineEdit_6.text()
         if t != '' and t != '?':
             t=float(t)
-            t = self.perevod(t, self.comboBox_14.currentText())
+            t = self.perevod(t, self.comboBox_18.currentText())
         S = self.lineEdit_7.text()
         if S != '' and S != '?':
             S=float(S)
-            S = self.perevod(S, self.comboBox_14.currentText())
+            S = self.perevod(S, self.comboBox_19.currentText())
         P = self.lineEdit_8.text()
         if P != '' and P != '?':
             P=float(P)
-            P = self.perevod(P, self.comboBox_14.currentText())
+            P = self.perevod(P, self.comboBox_20.currentText())
         Ek = self.lineEdit_9.text()
         if Ek != '' and Ek != '?':
             Ek=float(Ek)
-            Ek = self.perevod(Ek, self.comboBox_14.currentText())
+            Ek = self.perevod(Ek, self.comboBox_21.currentText())
         A = self.lineEdit_10.text()
         if A != '' and A != '?':
             A=float(A)
-            A = self.perevod(A, self.comboBox_14.currentText())
+            A = self.perevod(A, self.comboBox_22.currentText())
         N = self.lineEdit_11.text()
         if N != '' and N != '?':
             N=float(N)
-            N = self.perevod(N, self.comboBox_14.currentText())
+            N = self.perevod(N, self.comboBox_23.currentText())
         g = self.lineEdit_12.text()
         if g != '' and g != '?':
             g=float(g)
-            g = self.perevod(g, self.comboBox_14.currentText())
+            g = self.perevod(g, self.comboBox_24.currentText())
         h = self.lineEdit_13.text()
         if h != '' and h != '?':
             h=float(h)
-            h = self.perevod(h, self.comboBox_14.currentText())
+            h = self.perevod(h, self.comboBox_25.currentText())
         Ep = self.lineEdit_14.text()
         if Ep != '' and Ep != '?':
             Ep=float(Ep)
-            Ep = self.perevod(Ep, self.comboBox_14.currentText())
+            Ep = self.perevod(Ep, self.comboBox_26.currentText())
         y1 = [pc, mc, vc, Fc, tc, Sc, Pc, Ekc, Ac, Nc, gc, hc, Epc]
         y2 = ['p', 'm', 'v', 'F', 't', 'S', 'P', 'Ek', 'A', 'N', 'g', 'h', 'Ep']
         y3 = [p, m, v, F, t, S, P, Ek, A, N, g, h, Ep]
@@ -273,10 +273,10 @@ class MyWidget(QMainWindow):
         comb = "'"+comb+"'"
         print(comb)
         text = cur.execute("""SELECT ci FROM СИ
-                                    WHERE per='кг'""").fetchall()
+                                    WHERE per="""+str(comb)).fetchall()
         text = str(text)[3:-4]
         print(text)
-        return per*float(text)*0.1
+        return per*float(text)
 
 
         
